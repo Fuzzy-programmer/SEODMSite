@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO: title (~50-60 chars), primary phrase first. This is the blue link in Google results. -->
+  <title>How Google Ranks a Webpage: Simple SEO Guide for Beginners</title>
+
+  <!-- SEO: meta description (~150-160 chars). Not a direct ranking factor, but it shapes the click (CTR). -->
+  <meta name="description" content="A plain-English guide to how Google finds and ranks webpages: keywords, semantic HTML, page speed and backlinks. Every step is something anyone can do.">
+
+  <!-- SEO: one canonical URL so signals are not split. REPLACE with your final URL. -->
+  <link rel="canonical" href="https://fuzzy-programmer.github.io/">
+
+  <meta name="author" content="Lohith Kadiyala">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph + Twitter: how the link looks when shared on LinkedIn / WhatsApp -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How Google Ranks a Webpage: Simple SEO Guide for Beginners">
+  <meta property="og:description" content="Plain-English guide to how Google finds and ranks webpages, with steps anyone can follow.">
+  <meta property="og:url" content="https://fuzzy-programmer.github.io/">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Structured data: a machine-readable label for headline, author and date -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How Google Ranks a Webpage: Simple SEO Guide for Beginners",
+    "description": "Plain-English guide to how Google finds and ranks webpages, with steps anyone can follow.",
+    "author": { "@type": "Person", "name": "Lohith Kadiyala" },
+    "datePublished": "2026-11-10",
+    "inLanguage": "en",
+    "mainEntityOfPage": "https://fuzzy-programmer.github.io/"
+  }
+  </script>
+
+  <!-- ANALYTICS (Phase 2): paste GA4 snippet and Microsoft Clarity snippet here, then delete this comment -->
+
+  <style>
+    :root {
+      --ink: #16202e;
+      --muted: #4d5b6e;
+      --paper: #fbfcfe;
+      --line: #d5dce6;
+      --accent: #0b6e69;
+      --accent-soft: #dff1ef;
+      --mark: #ffe08a;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font: 18px/1.65 Charter, "Bitstream Charter", Georgia, serif;
+    }
+    h1, h2, h3, nav, figcaption, th, footer, .skip {
+      font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+    }
+    .wrap { max-width: 44rem; margin: 0 auto; padding: 0 1.25rem; }
+    .skip { position: absolute; left: -999px; }
+    .skip:focus { left: 1rem; top: 1rem; background: var(--mark); padding: .5rem .75rem; z-index: 10; }
+
+    header { border-bottom: 1px solid var(--line); padding: 2.5rem 0 1.75rem; }
+    h1 { font-size: clamp(1.9rem, 5vw, 2.6rem); line-height: 1.15; margin: 0 0 .75rem; letter-spacing: -.01em; }
+    .lede { font-size: 1.15rem; color: var(--muted); margin: 0; }
+    .byline { font: .9rem "Segoe UI", system-ui, sans-serif; color: var(--muted); margin-top: 1rem; }
+
+    nav[aria-label="On this page"] { margin: 1.5rem 0; font-size: .95rem; }
+    nav ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; }
+    a { color: var(--accent); text-underline-offset: 3px; }
+    a:focus-visible, summary:focus-visible { outline: 3px solid var(--mark); outline-offset: 2px; }
+
+    h2 { font-size: 1.5rem; margin: 2.75rem 0 .5rem; line-height: 1.25; }
+    h3 { font-size: 1.15rem; margin: 1.5rem 0 .25rem; }
+    p { margin: .75rem 0; }
+    li { margin: .35rem 0; }
+
+    figure { margin: 1.75rem 0; }
+    figure svg { width: 100%; height: auto; display: block; border: 1px solid var(--line); background: #fff; }
+    figcaption { font-size: .88rem; color: var(--muted); margin-top: .5rem; }
+    .box { fill: #fff; stroke: var(--ink); stroke-width: 1.5; }
+    .box.hot { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 2.5; }
+    .box.dash { fill: none; stroke-dasharray: 6 4; }
+    .lbl { font: 600 14px ui-monospace, Consolas, monospace; fill: var(--ink); }
+
+    .scroll { overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; font-size: .95rem; margin: 1rem 0; }
+    th, td { text-align: left; padding: .6rem .75rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { background: var(--accent-soft); }
+    code { font: .9em ui-monospace, Consolas, monospace; background: #eef2f7; padding: .1em .35em; }
+    pre { background: var(--ink); color: #eaf1f8; padding: 1rem; overflow-x: auto; font-size: .85rem; line-height: 1.5; }
+    pre code { background: none; padding: 0; }
+
+    aside { border-left: 4px solid var(--mark); background: #fff9e6; padding: .25rem 1.25rem; margin: 2rem 0; }
+    details { border-bottom: 1px solid var(--line); padding: .75rem 0; }
+    summary { cursor: pointer; font: 600 1rem "Segoe UI", system-ui, sans-serif; }
+
+    footer { border-top: 1px solid var(--line); margin-top: 3.5rem; padding: 1.5rem 0 3rem; font-size: .9rem; color: var(--muted); }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#content">Skip to main content</a>
+
+  <!-- <header>: introduces the page and holds the one and only <h1> -->
+  <header>
+    <div class="wrap">
+      <h1>How Google ranks a webpage: a simple SEO guide</h1>
+      <p class="lede">Search engine optimization (SEO) sounds technical, but most of it is common sense. This guide explains how Google decides which pages come first, and every step is something a beginner can do for free. The page is built the way it teaches, so view the source to see each technique in action.</p>
+      <p class="byline">By Lohith Kadiyala &middot; M.Tech Information Technology, <a href="https://www.iiita.ac.in/">IIIT Allahabad</a> &middot; <time datetime="2026-11-10">10 November 2026</time></p>
+    </div>
+  </header>
+
+  <!-- <main>: the unique content of this page (only one per page) -->
+  <main id="content">
+    <div class="wrap">
+
+      <!-- <nav>: navigation links. aria-label says which nav this is. -->
+      <nav aria-label="On this page">
+        <ul>
+          <li><a href="#how-google-works">How Google works</a></li>
+          <li><a href="#three-layers">Three layers of SEO</a></li>
+          <li><a href="#on-page">On-page SEO</a></li>
+          <li><a href="#semantic-html">Semantic HTML</a></li>
+          <li><a href="#technical">Technical SEO</a></li>
+          <li><a href="#backlinks">Backlinks</a></li>
+          <li><a href="#measure">Measuring results</a></li>
+          <li><a href="#mistakes">Mistakes</a></li>
+          <li><a href="#steps">Do it yourself</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#learn-more">Keep learning</a></li>
+        </ul>
+      </nav>
+
+      <!-- <article>: self-contained content that makes sense on its own -->
+      <article>
+
+        <p>If you want people to find your webpage on Google, two things must happen. Google has to <em>understand</em> what your page is about, and Google has to <em>trust</em> that it is the best answer for the person searching. SEO is the work of making both easier. Nobody can pay Google to rank them organically, and nobody has a secret switch. What you can do is remove obstacles and build proof that your page is useful.</p>
+
+        <!-- <section> + <h2>: each major topic gets its own section and heading -->
+        <section id="how-google-works">
+          <h2>How Google finds and ranks a page</h2>
+          <p>Think of Google as a giant library with three jobs:</p>
+          <ol>
+            <li><strong>Crawling.</strong> Automated programs follow links from page to page and download what they find, like a librarian walking the shelves.</li>
+            <li><strong>Indexing.</strong> Google reads each page and files it in a huge catalogue under the topics it covers, like a card in a library drawer.</li>
+            <li><strong>Ranking.</strong> When someone searches, Google picks the best matches from the catalogue and puts them in order.</li>
+          </ol>
+          <p>Hundreds of signals feed the ranking step, but they group into three questions. <strong>Relevance:</strong> does the page match what the person meant? <strong>Quality and experience:</strong> is it useful, fast and easy to use on a phone? <strong>Trust:</strong> do other reputable sites point to it? A page that fails any of the three steps, for example one Google cannot crawl, cannot rank at all.</p>
+        </section>
+
+        <section id="three-layers">
+          <h2>The three layers of SEO</h2>
+          <p>Everything in SEO falls into one of three layers. Knowing which layer a problem belongs to tells you where to fix it.</p>
+          <div class="scroll">
+            <table>
+              <caption class="skip">The three layers of SEO</caption>
+              <thead>
+                <tr><th scope="col">Layer</th><th scope="col">Question it answers</th><th scope="col">Examples</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">On-page</th><td>What is this page about, and is it useful?</td><td>Keywords, title, headings, content, images, internal links</td></tr>
+                <tr><th scope="row">Technical</th><td>Can Google reach, read and load the page easily?</td><td>Speed, mobile layout, HTTPS, sitemap, structured data</td></tr>
+                <tr><th scope="row">Off-page</th><td>Do other people vouch for this page?</td><td>Backlinks, mentions, shares, reputation</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="on-page">
+          <h2>On-page SEO: what you control inside the page</h2>
+
+          <h3>Start with what people search for</h3>
+          <p>A keyword is simply the words a person types into Google. Behind every keyword is an <strong>intent</strong>: they want to learn something, find a specific site, compare options or buy. Write for the intent, not just the words. Beginners should aim for <strong>long-tail keywords</strong>, which are longer and more specific phrases such as "how Google ranks a webpage". They have fewer searches than a broad term like "SEO", but far less competition, so a new page has a realistic chance.</p>
+
+          <h3>Where to place your keywords naturally</h3>
+          <ul>
+            <li><strong>Title tag:</strong> about 50 to 60 characters, main phrase near the front.</li>
+            <li><strong>Meta description:</strong> about 150 to 160 characters. It is your advert in the results, so write it to earn the click.</li>
+            <li><strong>H1 and H2 headings:</strong> one H1 for the main topic, H2s for sub-topics.</li>
+            <li><strong>First paragraph, URL and image ALT text:</strong> use the phrase where it fits the sentence.</li>
+          </ul>
+          <p>Repeating a phrase unnaturally, known as keyword stuffing, reads badly and goes against Google's spam policies. Use synonyms and write like a person.</p>
+
+          <h3>Content, images and links</h3>
+          <ul>
+            <li><strong>Content:</strong> answer the question fully and honestly, in your own words. Thin or copied pages rarely rank.</li>
+            <li><strong>Images:</strong> compress them, and give every meaningful image descriptive ALT text. ALT text helps search engines and people using screen readers.</li>
+            <li><strong>Internal links:</strong> link your own pages together with descriptive text. "Read the backlinks section" is better than "click here".</li>
+          </ul>
+        </section>
+
+        <section id="semantic-html">
+          <h2>Semantic HTML: labelling the boxes</h2>
+          <p>Semantic HTML means using tags that describe what each part of the page is, such as a heading, a navigation menu or a footer, instead of generic <code>&lt;div&gt;</code> boxes. It works like labels on boxes in a warehouse: without labels, a robot has to guess what is inside.</p>
+
+          <!-- <figure> + <figcaption>: diagram with caption. SVG has a title and description for accessibility. -->
+          <figure>
+            <svg viewBox="0 0 640 380" role="img" aria-labelledby="map-title map-desc">
+              <title id="map-title">A webpage layout labelled with semantic HTML tags</title>
+              <desc id="map-desc">A diagram of a page with a header at the top, a navigation bar below it, a main area containing an article with two sections and an aside beside it, and a footer at the bottom.</desc>
+              <rect class="box" x="20" y="20" width="600" height="50"/>
+              <text class="lbl" x="34" y="51">&lt;header&gt;  contains the h1</text>
+              <rect class="box" x="20" y="80" width="600" height="36"/>
+              <text class="lbl" x="34" y="104">&lt;nav&gt;  main links</text>
+              <rect class="box dash" x="20" y="126" width="600" height="190"/>
+              <text class="lbl" x="34" y="146">&lt;main&gt;</text>
+              <rect class="box hot" x="36" y="156" width="400" height="144"/>
+              <text class="lbl" x="48" y="176">&lt;article&gt;</text>
+              <rect class="box" x="52" y="186" width="368" height="46"/>
+              <text class="lbl" x="64" y="214">&lt;section&gt;  h2 + text</text>
+              <rect class="box" x="52" y="242" width="368" height="46"/>
+              <text class="lbl" x="64" y="270">&lt;section&gt;  h2 + text</text>
+              <rect class="box" x="448" y="156" width="156" height="144"/>
+              <text class="lbl" x="460" y="176">&lt;aside&gt;</text>
+              <rect class="box" x="20" y="326" width="600" height="40"/>
+              <text class="lbl" x="34" y="351">&lt;footer&gt;  author, sources</text>
+            </svg>
+            <figcaption>Figure 1. The structure of this page. Each box is a real tag you can find in the page source.</figcaption>
+          </figure>
+
+          <div class="scroll">
+            <table>
+              <caption class="skip">Semantic elements and what they communicate</caption>
+              <thead>
+                <tr><th scope="col">Element</th><th scope="col">What it communicates</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><code>&lt;title&gt;</code></td><td>The page's name, shown as the clickable headline in search results.</td></tr>
+                <tr><td><code>&lt;h1&gt;</code></td><td>The main topic. Use exactly one.</td></tr>
+                <tr><td><code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code></td><td>The outline: sub-topics and the order of ideas.</td></tr>
+                <tr><td><code>&lt;nav&gt;</code></td><td>"These are navigation links, not the main content."</td></tr>
+                <tr><td><code>&lt;main&gt;</code></td><td>"This is the part of the page that is unique."</td></tr>
+                <tr><td><code>&lt;article&gt;</code></td><td>A complete piece of content that stands alone.</td></tr>
+                <tr><td><code>&lt;aside&gt;</code></td><td>Related but secondary content.</td></tr>
+                <tr><td><code>&lt;footer&gt;</code></td><td>Authorship, sources and contact details.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <aside>
+            <h3>What semantic HTML does not do</h3>
+            <p>Semantic tags are not a ranking cheat code. They help search engines and assistive technology understand your content, and they work best alongside the things that move rankings: useful content, a matching title, a fast page and links from trusted sites.</p>
+          </aside>
+        </section>
+
+        <section id="technical">
+          <h2>Technical SEO: make the page easy to reach and fast to load</h2>
+          <ul>
+            <li><strong>Mobile-friendly layout.</strong> Google mainly judges the mobile version of a page, so it must read well on a phone. A viewport meta tag and flexible layout are the starting point.</li>
+            <li><strong>Page speed.</strong> Google measures loading, responsiveness and visual stability, together called Core Web Vitals. Compress images, avoid heavy scripts and keep the page light.</li>
+            <li><strong>HTTPS.</strong> A secure connection builds visitor trust and is a small ranking signal. GitHub Pages provides it automatically.</li>
+            <li><strong>Crawlability.</strong> A <code>robots.txt</code> file tells crawlers what they may read, and an XML sitemap lists the pages you want indexed.</li>
+            <li><strong>Structured data.</strong> Small blocks of JSON-LD code label your page as an article, a product or an event, which helps Google interpret it.</li>
+            <li><strong>One clean URL.</strong> A canonical link tells Google which address is the real one when a page can be reached in several ways.</li>
+          </ul>
+        </section>
+
+        <section id="backlinks">
+          <h2>Backlinks: how other sites vouch for you</h2>
+          <p>A backlink is a link from another website to yours. Google treats it a little like a recommendation: if a respected site points to your page, your page is probably worth reading. This is the off-page layer, and it is the slowest to build because you do not control it.</p>
+          <ul>
+            <li><strong>Quality beats quantity.</strong> One link from a relevant, trusted site, such as a university page or a respected blog, counts for more than dozens from unrelated pages.</li>
+            <li><strong>Relevance matters.</strong> A link from a page about the same topic is a stronger signal than one from an unrelated site.</li>
+            <li><strong>Not every link passes ranking value.</strong> Links marked <code>nofollow</code>, <code>sponsored</code> or <code>ugc</code>, which include many social media links, tell Google not to count them as a vote. They can still bring visitors.</li>
+            <li><strong>Earn links, do not buy them.</strong> Paying for links or running large link-swap schemes breaks Google's spam policies and can get a site demoted.</li>
+          </ul>
+          <p>Ways anyone can earn links ethically include publishing something genuinely useful, asking an institution or community you belong to to reference it, sharing it where the topic is discussed, and citing and crediting good sources so others find you.</p>
+        </section>
+
+        <section id="measure">
+          <h2>Measuring results with free tools</h2>
+          <ul>
+            <li><strong>Google Search Console</strong> shows whether your page is indexed, which searches show it, how many people see it (impressions) and how many click (CTR).</li>
+            <li><strong>Google Analytics 4</strong> shows visitors, page views, traffic sources and engagement time.</li>
+            <li><strong>Microsoft Clarity</strong> shows where visitors click and scroll through heatmaps and session recordings.</li>
+            <li><strong>Lighthouse and PageSpeed Insights</strong> audit speed, accessibility and basic SEO, and give instant scores with fix suggestions.</li>
+          </ul>
+          <p>New pages take time. Indexing can take from hours to weeks, and search data takes longer to build up, so check results regularly rather than expecting instant rankings.</p>
+        </section>
+
+        <section id="mistakes">
+          <h2>Common beginner mistakes</h2>
+          <ul>
+            <li>Targeting a very broad keyword that big sites already own.</li>
+            <li>Stuffing the same phrase into every sentence.</li>
+            <li>Using vague titles such as "Home" or "Untitled".</li>
+            <li>Forgetting ALT text, or skipping heading levels.</li>
+            <li>Copying content from another site.</li>
+            <li>Ignoring phones, where most visitors browse.</li>
+            <li>Buying links or trading them in bulk.</li>
+          </ul>
+        </section>
+
+        <section id="steps">
+          <h2>Do it yourself in ten steps</h2>
+          <ol>
+            <li>Pick one specific topic and the long-tail phrase people would search for.</li>
+            <li>Write helpful, original content that fully answers that question.</li>
+            <li>Put the phrase naturally in the title, H1, first paragraph and URL.</li>
+            <li>Write a meta description that makes people want to click.</li>
+            <li>Build the page with semantic tags and a single H1.</li>
+            <li>Add ALT text to images and descriptive text to links.</li>
+            <li>Make it fast and mobile-friendly, and serve it over HTTPS.</li>
+            <li>Add <code>robots.txt</code>, a sitemap and structured data, then submit the sitemap in Search Console.</li>
+            <li>Share the page and ask relevant sites or institutions to link to it.</li>
+            <li>Watch your analytics, learn what is working and improve one thing at a time.</li>
+          </ol>
+        </section>
+
+        <section id="faq">
+          <h2>Frequently asked questions</h2>
+          <details>
+            <summary>Can anyone do SEO without paying for tools?</summary>
+            <p>Yes. Search Console, Analytics, Clarity and Lighthouse are free, and the biggest wins, such as clear titles, useful content and fast pages, cost nothing.</p>
+          </details>
+          <details>
+            <summary>How long does it take to rank?</summary>
+            <p>It varies. Getting indexed can take hours or weeks, and competitive phrases can take months. Specific long-tail phrases move faster.</p>
+          </details>
+          <details>
+            <summary>Does a custom domain help ranking?</summary>
+            <p>Not by itself. A new domain starts with no history either way. A domain can help branding and trust, but content and links drive rankings.</p>
+          </details>
+          <details>
+            <summary>Do I need semantic HTML to rank?</summary>
+            <p>It is not required, but clear structure helps search engines and visitors understand the page, and it supports accessibility.</p>
+          </details>
+        </section>
+
+        <section id="learn-more">
+          <h2>Keep learning: trusted guides</h2>
+          <p>These are well-regarded free resources if you want to go deeper. I have used them to check my understanding.</p>
+          <ul>
+            <li><a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide">Google Search Central's SEO Starter Guide</a>, the official advice from the search engine itself.</li>
+            <li><a href="https://moz.com/beginners-guide-to-seo">Moz's Beginner's Guide to SEO</a>, a long-running, chapter-by-chapter introduction.</li>
+            <li><a href="https://web.dev/articles/vitals">web.dev on Core Web Vitals</a>, an explanation of speed and experience metrics.</li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Semantics">MDN Web Docs on semantics in HTML</a>, a reference for what each tag means.</li>
+          </ul>
+        </section>
+
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Written by Lohith Kadiyala as part of a Digital Marketing course practical at <a href="https://www.iiita.ac.in/">Indian Institute of Information Technology, Allahabad</a>.</p>
+    </div>
+  </footer>
+</body>
+</html>

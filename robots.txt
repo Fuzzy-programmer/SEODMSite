@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fuzzy-programmer.github.io/sitemap.xml
