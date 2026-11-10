@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fuzzy-programmer.github.io/sitemap.xml
+Sitemap: https://fuzzy-programmer.github.io/SEODMSite/sitemap.xml
